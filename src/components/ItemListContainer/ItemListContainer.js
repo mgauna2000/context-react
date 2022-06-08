@@ -2,12 +2,14 @@ import React, { Fragment } from "react";
 // import ItemCount from "../ItemCount/ItemCount";
 import "./ItemListContainer.css";
 import { Link } from "react-router-dom";
+import CartContext from '../../context/CardContext'
+import { useContext } from "react";
 
 const ItemListContainer = ({ image, title, price, id }) => {
 
   // console.log("producto: ", id)
 
-
+  const { addProductToCart } = useContext(CartContext)
 
   return (
     <Fragment>
@@ -22,6 +24,11 @@ const ItemListContainer = ({ image, title, price, id }) => {
               <Link to={`/productos/${id}`}>
               ver detalle
               </Link>
+            </button>
+            <button type="button" className="btn btn-secondary m-3" onClick={() => addProductToCart({ image, title, price, id })}>
+              {/* <Link to={}> */}
+              Agregar producto
+              {/* </Link> */}
             </button>
           </div>
         </div>

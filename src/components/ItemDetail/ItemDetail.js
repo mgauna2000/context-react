@@ -3,8 +3,13 @@ import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
 
+
 const ItemDetail = ({ data }) => {
   // max-width: 540px;
+
+
+
+  // seguir en 01:10:00 el video de context -------------
 
   const [amount, setAmount] = useState(1);
   const [showButton, setShowButton] = useState(false);
