@@ -35,6 +35,9 @@ const CartWidget = () => {
               ></button>
             </div>
             <div className="modal-body">
+              {cartListItems.length === 0 && (
+                <p>No hay productos agregados al carrito</p>
+              )}
               {cartListItems.map((item) => {
                 return (
                   <div
@@ -43,7 +46,7 @@ const CartWidget = () => {
                     style={{ display: "flex" }}
                   >
                     <img
-                      src={`${item.image}`}
+                      src={`./${item.image}`}
                       className="img-fluid rounded-start"
                       alt="..."
                       style={{ width: "150px", height: "150px" }}
@@ -65,7 +68,7 @@ const CartWidget = () => {
                 className="btn btn-secondary"
                 data-bs-dismiss="modal"
               >
-                Close
+                Cerrar
               </button>
               {/* <button type="button" className="btn btn-primary">
                 Save changes

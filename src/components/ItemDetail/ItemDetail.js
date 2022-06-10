@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
+// import CartContext from '../../context/CardContext'
+// import { useContext } from "react";
 
 
 const ItemDetail = ({ data }) => {
   // max-width: 540px;
 
-
+  // const { addProductAmount } = useContext(CartContext)
 
   // seguir en 01:10:00 el video de context -------------
 

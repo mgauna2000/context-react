@@ -11,6 +11,7 @@ import NotFound from "./pages/NotFound";
 import Detalle from "./pages/Detalle";
 import ProductsList from "./pages/ProductsList";
 import { CartProvider } from "./context/CardContext";
+import Cart from "./pages/Cart";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route exact path="/nosotros" element={<Nosotros />} />
           <Route exact path="/products/:category" element={<ProductsList />} />
           <Route exact path="/productos/:id" element={<Detalle />} />
+          <Route exact path="/cart" element={<Cart />} />
           {/* <Route exact path="/products/:category" element={<h2>pagina de productos</h2>} /> */}
           <Route exact path="*" element={<NotFound />} />
         </Routes>
